@@ -1,0 +1,2 @@
+1¡¢utils.js is also needed to use Chart.bundle.js . 
+	Get details from source code of examples.
