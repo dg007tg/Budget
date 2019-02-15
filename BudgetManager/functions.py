@@ -26,11 +26,12 @@ def cal_day_spending(date):
         date = datetime.date(int(match.group(1)),\
                     int(match.group(2)),\
                     int(match.group(3)))
+    dateTime = datetime.datetime(date.year, date.month, date.day, 23, 59, 59)
     rows = CurrentFlows.objects.filter(effective_to_date__gte = date).\
-            filter(date__lte = date)
+            filter(datetime__lte = dateTime)
     spending = 0.0
     for row in rows:
-        start_date = row.date
+        start_date = row.datetime.date()
         end_date = row.effective_to_date
         effective_days = (end_date - start_date).days + 1
         amount = float(row.amount)

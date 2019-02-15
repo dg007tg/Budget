@@ -3,9 +3,8 @@ import datetime
 
 # Create your models here.
 class CurrentFlows(models.Model):
-    date = models.DateField("date", auto_now_add = True)
+    datetime = models.DateTimeField(auto_now_add = False)
     effective_to_date = models.DateField("date")
-    time = models.TimeField("time", auto_now_add = True)
     amount = models.FloatField("amount", default = 0.0)
     comment = models.TextField("comment", default = "null")
 
