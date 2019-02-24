@@ -1,0 +1,117 @@
+<!-- Created: 22/02/2019 by Administrator -->
+{%load staticfiles%}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional/EN">
+<html>
+  <head>
+    <title>Registration</title>
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+    <meta name="generator" content="PyScripter">
+  </head>
+  <body>
+    <script type = "text/javascript"
+        src = "{%static 'js/jquery-3.3.1.js'%}">
+    </script>
+    <link rel = "stylesheet" href = "{%static 'css/bootstrap.min.css'%}">
+    <script type = "text/javascript"
+        src = "{%static 'js/bootstrap.min.js'%}">
+    </script>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width:35%"></th>
+                    <th style="width:65%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <td>
+                                <label for="user_name">Acount Name</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="user_name" placeholder="Your account name will be used to log in.">
+                            </td>
+                        </div>
+                    </form>
+                </tr>
+                <tr>
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <td>
+                                <label for="password">Password</label>
+                            </td>
+                            <td>
+                                <input type="password" class="form-control" id="password" placeholder="Your password.">
+                            </td>
+                        </div>
+                    </form>
+                </tr>
+                <tr>
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <td>
+                                <label for="confirm_password">Input Password Again</label>
+                            </td>
+                            <td>
+                                <input type="password" class="form-control" id="confirm_password" placeholder="Input your password once again.">
+                                <label id="psw_not_match" hidden="hidden" style="color:red;">This password is not what you've given to me (T T).</label>
+                            </td>
+                        </div>
+                    </form>
+                </tr>
+                <tr>
+                    <form class="form-inline" role="form">
+                        <div class="form-group">
+                            <td>
+                                <label for="email_address">Email</label>
+                            </td>
+                            <td>
+                                <input type="text" class="form-control" id="email_address" placeholder="Your email address.">
+                            </td>
+                        </div>
+                    </form>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        var form = document.getElementById("confirm_password");
+        form.onkeyup = function(){
+            if($("#password").val() != $("#confirm_password").val()){
+                var tmp_label = document.getElementById("psw_not_match");
+                tmp_label.removeAttribute("hidden");
+            }else{
+                var tmp_label = document.getElementById("psw_not_match");
+                tmp_label.setAttribute("hidden","hidden");
+            }
+        }
+    </script>
+    </div>
+    <script>
+        $(function(){
+            var csrf_token = document.getElementsByName("csrfmiddlewaretoken")[0].value;
+            $("#btn_submit").click(function (){
+                $.post("user-api/registration/details",
+                    {
+                        "user_name":$("#user_name").val(),
+                        "password":$("#password").val(),
+                        "email_address":$("#email_address").val(),
+                        "csrfmiddlewaretoken":csrf_token
+                    },function(data){
+                        document.write(data);
+                    });
+            });
+        });
+
+        $(function(){
+            $("#btn_cancel").click(function(){
+                //$.get(document.URL,{},function(){});
+            });
+        });
+
+
+    </script>
+  </body>
+</html>
