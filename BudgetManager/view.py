@@ -19,6 +19,7 @@ def hello(request):
 '''
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from django.views.decorators.csrf import csrf_exempt
 from . import db_tools
 from . import server_tools
 import json
