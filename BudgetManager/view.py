@@ -196,6 +196,50 @@ def validate(request):
         return HttpResponse("-1")
     elif(ret == db_tools.PASSWORD_WRONG):
         return HttpResponse("-2")
+'''
+Functions related to mobile ends.
+***********************************************************
+'''
+@csrf_exempt
+def mobileEndValidate(request):
+    '''
+    This function return a cookie for further request.
+    Typically there is csrf_token in the cookie.
+    '''
+    form = server_tools.checkUserRequestForm(request)
+    ret = db_tools.validate_user(form)
+    if(ret == db_tools.PASSWORD_CORRECT):
+        response = HttpResponse("0")
+        sessionID = None
+        session = None
+        sessionID = server_tools.sessions.parseCookies(request.COOKIES)
+        if(sessionID != None):
+            session = server_tools.sessions.getSession(sessionID)
+        if(session != None):
+            sessionID = sessionID
+        else:
+            server_tools.sessions.genSessionID()
+            user_info = server_tools.UserInfo()
+            user_info.setUserInfo("user_name", form["user_name"])
+            user_info.setUserInfo("auto_login", form["auto_login"])
+            import datetime
+            user_info.setUserInfo("last_login_time", datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+            server_tools.sessions.addSession(sessionID,user_info)
+
+        response.set_cookie("sessionID",sessionID)
+        return response
+    elif(ret == db_tools.USER_NOT_EXIST):
+        return HttpResponse("-1")
+    elif(ret == db_tools.PASSWORD_WRONG):
+        return HttpResponse("-2")
+
+def mobileEndReport(request):
+    return HttpResponse("This is your report")
+
+'''
+End of mobile end function definitions
+***********************************************************
+'''
 
 
 def main():
