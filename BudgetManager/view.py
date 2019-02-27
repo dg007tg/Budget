@@ -197,10 +197,25 @@ def validate(request):
         return HttpResponse("-1")
     elif(ret == db_tools.PASSWORD_WRONG):
         return HttpResponse("-2")
+    
+def logout(request):
+    sessionID = None
+    session = None
+    sessionID = server_tools.sessions.parseCookies(request.COOKIES)
+    if(sessionID != None):
+        session = server_tools.sessions.delSession(sessionID)
+    return render(request, 'logout.htm', {})
+
 '''
 Functions related to mobile ends.
 ***********************************************************
 '''
+VALIDATE_SUCCESS = "0"
+USER_NOT_EXIST = "-1"
+PASSWORD_WRONG = "-2"
+LOGOUT_SUCCESS = "-3"
+LOGOUT_FAILURE = "-4"
+
 @csrf_exempt
 def mobileEndValidate(request):
     '''
@@ -233,7 +248,16 @@ def mobileEndValidate(request):
         return HttpResponse("-1")
     elif(ret == db_tools.PASSWORD_WRONG):
         return HttpResponse("-2")
-
+@csrf_exempt
+def mobileEndLogout(request):
+    sessionID = None
+    session = None
+    sessionID = server_tools.sessions.parseCookies(request.COOKIES)
+    if(sessionID != None):
+        session = server_tools.sessions.delSession(sessionID)
+        return HttpResponse(LOGOUT_SUCCESS)
+    return HttpResponse(LOGOUT_FAILURE)
+    
 def mobileEndReport(request):
     return HttpResponse("This is your report")
 
