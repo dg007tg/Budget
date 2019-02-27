@@ -147,7 +147,7 @@ class NaiveSession:
             return self.sessions[sessionID]
         else:
             return None
-    def delSesstion(self, sessionID):
+    def delSession(self, sessionID):
         del self.sessions[sessionID]
     def parseCookies(self, cookies):
         '''
