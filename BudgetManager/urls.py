@@ -41,7 +41,9 @@ urlpatterns = [
     url(r"^user-api/registration/register$", view.registration),
     url(r"^user-api/validation$", view.validate),
     url(r"^user-api/user-report$", view.budget),
+    url(r"^user-api/logout$", view.logout),
     url(r"^user-api/mobile-end/user-report$", view.mobileEndReport),
     url(r"^user-api/mobile-end/validation$", view.mobileEndValidate),
+    url(r"^user-api/mobile-end/logout$", view.mobileEndLogout),
 ]
 
