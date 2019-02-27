@@ -31,7 +31,10 @@ def checkRequestForm(request):
     ret["readonly"] = "disabled = \"disabled\""
     from . import server_tools
     sessionID = server_tools.sessions.parseCookies(request.COOKIES)
-    ret["user_name"] = server_tools.sessions.getSession(sessionID).getInfo("user_name")
+    if(server_tools.sessions.getSession(sessionID) == None):
+        ret["user_name"] = None
+    else:
+        ret["user_name"] = server_tools.sessions.getSession(sessionID).getInfo("user_name")
     #used by:
     #view::retBills_json
     #view::retSpendings_json
