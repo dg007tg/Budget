@@ -130,7 +130,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_DIRS = [
     #here define path of each subfolder
     ("css", os.path.join(STATIC_ROOT, 'css')),
-    ("js", os.path.join(STATIC_ROOT, 'jS')),
+    ("js", os.path.join(STATIC_ROOT, 'js')),
     ("fonts",os.path.join(STATIC_ROOT, 'fonts')),
     ("images",os.path.join(STATIC_ROOT, 'images')),
 ]

@@ -1,0 +1,528 @@
+System check identified some issues:
+
+WARNINGS:
+CurrentFlow.DailySpending.date: (fields.W161) Fixed default value provided.
+	HINT: It seems you set a fixed date / time / datetime value as default for this field. This may not be what you want. If you want to have the current date as default, use `django.utils.timezone.now`
+
+System check identified 1 issue (0 silenced).
+[16/Feb/2019 14:14:45] "GET / HTTP/1.1" 200 18615
+[16/Feb/2019 14:14:45] "GET /static/css/bootstrap-table.css.map HTTP/1.1" 404 1810
+[16/Feb/2019 14:14:45] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550326484696 HTTP/1.1" 200 24
+[16/Feb/2019 14:14:45] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 24
+[16/Feb/2019 14:15:05] "GET / HTTP/1.1" 200 18615
+[16/Feb/2019 14:15:05] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 24
+[16/Feb/2019 14:15:05] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550326504642 HTTP/1.1" 200 24
+[16/Feb/2019 14:15:05] "GET /static/css/bootstrap-table.css.map HTTP/1.1" 404 1810
+[16/Feb/2019 14:15:32] "GET / HTTP/1.1" 200 18615
+[16/Feb/2019 14:15:32] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[16/Feb/2019 14:15:32] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[16/Feb/2019 14:15:32] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[16/Feb/2019 14:15:32] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[16/Feb/2019 14:15:34] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[16/Feb/2019 14:15:36] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[16/Feb/2019 14:15:37] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[16/Feb/2019 14:15:39] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 549514
+[16/Feb/2019 14:15:40] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[16/Feb/2019 14:15:40] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 24
+[16/Feb/2019 14:15:40] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550326538267 HTTP/1.1" 200 24
+Not Found: /favicon.ico
+[16/Feb/2019 14:15:40] "GET /favicon.ico HTTP/1.1" 404 3215
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[16/Feb/2019 14:26:21] "GET /?nsukey=44br1JYz5BrE2k1XexILke7I3zgelPbd7jM5cZOThWWs4QyOcvBjFobdJAyU9v8KRopiXmeXmyVjGCDO3beAw7VUnarBKXEz8gCPYRqD2B0emKoc92h8TYvD3RdSCb6BrEX2FAztNM74deLNCH0IeXTF4866PqU4rKllXiQlwQg5wgISK4mrzoCs0C0eO8M2B20dlSeGNuCqGFuCBNHfKT5w3D3D HTTP/1.1" 200 18615
+[16/Feb/2019 14:26:21] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[16/Feb/2019 14:26:21] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[16/Feb/2019 14:26:21] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[16/Feb/2019 14:26:21] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[16/Feb/2019 14:26:21] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[16/Feb/2019 14:26:21] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[16/Feb/2019 14:26:25] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[16/Feb/2019 14:26:28] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 549514
+[16/Feb/2019 14:26:29] "GET /static/fonts/glyphicons-halflings-regular.woff HTTP/1.1" 200 23424
+[16/Feb/2019 14:26:29] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 24
+[16/Feb/2019 14:26:29] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[16/Feb/2019 14:26:29] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[16/Feb/2019 14:27:17] "GET / HTTP/1.1" 200 18615
+[16/Feb/2019 14:27:17] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[16/Feb/2019 14:27:18] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[16/Feb/2019 14:27:18] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[16/Feb/2019 14:27:20] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[16/Feb/2019 14:27:21] "GET /?nsukey=44br1JYz5BrE2k1XexILke7I3zgelPbd7jM5cZOThWWs4QyOcvBjFobdJAyU9v8KRopiXmeXmyVjGCDO3beAw7VUnarBKXEz8gCPYRqD%2B0emKoc92h8TYvD3RdSCb6BrEX%2FAztNM74deLNCH0IeXTF4866PqU4rKllXiQlwQg5wgISK4mrzoCs0C0eO8M2B20dlSeGNuCqGFuCBNHfKT5w%3D%3D HTTP/1.1" 200 18615
+[16/Feb/2019 14:27:21] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 376832
+[16/Feb/2019 14:27:21] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[16/Feb/2019 14:27:23] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[16/Feb/2019 14:27:23] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[16/Feb/2019 14:27:23] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[16/Feb/2019 14:27:24] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[16/Feb/2019 14:27:25] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[16/Feb/2019 14:27:25] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 335872
+[16/Feb/2019 14:59:58] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550326538268 HTTP/1.1" 200 24
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-16 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-15 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-14 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-13 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-12 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-11 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-10 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-09 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-08 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-07 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-06 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-05 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-04 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-03 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-02 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-01 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-31 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-30 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-29 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-28 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-27 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-26 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-25 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-24 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-23 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-22 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-21 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-20 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-19 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-01-18 23:59:59) while time zone support is active.
+  RuntimeWarning)
+[16/Feb/2019 15:00:28] "GET /records_json/daily_spendings/recompute?period=30&sortOrder=asc HTTP/1.1" 200 1343
+[16/Feb/2019 15:00:34] "GET /records_json/daily_spendings?period=30&sortOrder=asc HTTP/1.1" 200 1343
+[16/Feb/2019 15:00:35] "GET /static/images/loading.gif HTTP/1.1" 200 1181426
+[17/Feb/2019 01:23:02] "GET / HTTP/1.1" 200 18615
+[17/Feb/2019 01:23:02] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[17/Feb/2019 01:23:02] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[17/Feb/2019 01:23:02] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[17/Feb/2019 01:23:02] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[17/Feb/2019 01:23:02] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[17/Feb/2019 01:23:04] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[17/Feb/2019 01:23:06] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[17/Feb/2019 01:23:09] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 549514
+[17/Feb/2019 01:23:10] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[17/Feb/2019 01:23:10] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 1343
+Not Found: /favicon.ico
+[17/Feb/2019 01:23:10] "GET /favicon.ico HTTP/1.1" 404 3215
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[17/Feb/2019 05:09:14] "GET / HTTP/1.1" 200 18615
+[17/Feb/2019 05:09:14] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[17/Feb/2019 05:09:14] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[17/Feb/2019 05:09:14] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[17/Feb/2019 05:09:14] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[17/Feb/2019 05:09:16] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[17/Feb/2019 05:09:16] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[17/Feb/2019 05:09:18] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[17/Feb/2019 05:09:22] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 549514
+[17/Feb/2019 05:09:22] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+Not Found: /favicon.ico
+[17/Feb/2019 05:09:22] "GET /favicon.ico HTTP/1.1" 404 3215
+[17/Feb/2019 05:09:23] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 1343
+[17/Feb/2019 05:09:23] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550380161147 HTTP/1.1" 200 24
+[17/Feb/2019 05:10:14] "GET / HTTP/1.1" 200 18615
+[17/Feb/2019 05:10:15] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[17/Feb/2019 05:10:15] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[17/Feb/2019 05:10:16] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[17/Feb/2019 05:10:16] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[17/Feb/2019 05:10:17] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 360448
+[17/Feb/2019 05:10:17] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[17/Feb/2019 05:10:22] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[17/Feb/2019 05:10:23] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550380161147 HTTP/1.1" 200 24
+[17/Feb/2019 05:10:23] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 1343
+[18/Feb/2019 01:07:33] "GET / HTTP/1.1" 200 18615
+[18/Feb/2019 09:51:48] code 400, message Bad request syntax ('\x00\x9c\x00\x01\x1a+<M\x00\x01\x00\x00\x01\x00M\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[18/Feb/2019 09:51:48] "  +<M    M                                                                                                                                           " 400 -
+[18/Feb/2019 14:09:10] "GET / HTTP/1.1" 200 18615
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[19/Feb/2019 20:16:03] "GET / HTTP/1.1" 200 18615
+Not Found: /favicon.ico
+[19/Feb/2019 20:16:05] "GET /favicon.ico HTTP/1.1" 404 3215
+[20/Feb/2019 00:02:06] "GET / HTTP/1.1" 200 18615
+[21/Feb/2019 10:37:11] "GET / HTTP/1.1" 200 18615
+[21/Feb/2019 13:06:44] "GET / HTTP/1.1" 200 18615
+[21/Feb/2019 13:06:44] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[21/Feb/2019 13:06:44] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[21/Feb/2019 13:06:44] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[21/Feb/2019 13:06:44] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[21/Feb/2019 13:06:44] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[21/Feb/2019 13:06:45] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[21/Feb/2019 13:06:47] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[21/Feb/2019 13:06:51] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 549514
+[21/Feb/2019 13:06:52] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[21/Feb/2019 13:06:52] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 1343
+Not Found: /favicon.ico
+[21/Feb/2019 13:06:52] "GET /favicon.ico HTTP/1.1" 404 3215
+[21/Feb/2019 13:07:44] "GET / HTTP/1.1" 200 18615
+[21/Feb/2019 13:07:45] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[21/Feb/2019 13:07:47] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[21/Feb/2019 13:07:48] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[21/Feb/2019 13:07:49] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[21/Feb/2019 13:07:49] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 262144
+[21/Feb/2019 13:07:49] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[22/Feb/2019 10:45:33] "GET / HTTP/1.1" 200 18615
+[22/Feb/2019 10:45:33] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[22/Feb/2019 10:45:33] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[22/Feb/2019 10:45:33] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[22/Feb/2019 10:45:33] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[22/Feb/2019 10:45:33] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[22/Feb/2019 10:45:33] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[22/Feb/2019 10:45:36] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[22/Feb/2019 10:45:40] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 549514
+[22/Feb/2019 10:45:41] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[22/Feb/2019 10:45:41] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 1343
+[22/Feb/2019 10:45:41] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550832338261 HTTP/1.1" 200 24
+Not Found: /favicon.ico
+[22/Feb/2019 10:45:41] "GET /favicon.ico HTTP/1.1" 404 3215
+[22/Feb/2019 10:46:25] "GET / HTTP/1.1" 200 18615
+[22/Feb/2019 10:46:25] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[22/Feb/2019 10:46:25] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[22/Feb/2019 10:46:26] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550832385553 HTTP/1.1" 200 24
+[22/Feb/2019 10:46:26] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 1343
+Not Found: /http:/47.101.206.91/
+[22/Feb/2019 14:24:44] "GET http://47.101.206.91/ HTTP/1.1" 404 1669
+[22/Feb/2019 14:24:46] code 400, message Bad request version ('\x03\x00(\x00\x04ÿU\x01\x00\x08\x00\x00\x00MSSQLServer\x00d!\x00\x00')
+[22/Feb/2019 14:24:46] " 4            ( ÿU    MSSQLServer d!  " 400 -
+[23/Feb/2019 11:36:09] "GET / HTTP/1.1" 200 18615
+[23/Feb/2019 12:35:27] "GET / HTTP/1.1" 200 18615
+[23/Feb/2019 16:27:22] "GET / HTTP/1.1" 200 18615
+[23/Feb/2019 16:27:23] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[23/Feb/2019 16:27:23] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[23/Feb/2019 16:27:23] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[23/Feb/2019 16:27:23] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[23/Feb/2019 16:27:23] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[23/Feb/2019 16:27:24] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[23/Feb/2019 16:27:25] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[23/Feb/2019 16:27:29] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 549514
+[23/Feb/2019 16:27:30] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+Not Found: /favicon.ico
+[23/Feb/2019 16:27:30] "GET /favicon.ico HTTP/1.1" 404 3215
+[23/Feb/2019 16:27:30] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550939247381 HTTP/1.1" 200 24
+[23/Feb/2019 16:27:30] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 1343
+[23/Feb/2019 16:28:25] "GET / HTTP/1.1" 200 18615
+Not Found: /favicon.ico
+[23/Feb/2019 16:28:26] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550939305352 HTTP/1.1" 200 24
+[23/Feb/2019 16:28:26] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 1343
+[23/Feb/2019 16:28:26] "GET /favicon.ico HTTP/1.1" 404 3215
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-23 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-22 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-21 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-20 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-19 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-18 23:59:59) while time zone support is active.
+  RuntimeWarning)
+/usr/local/lib/python3.5/dist-packages/django/db/models/fields/__init__.py:1421: RuntimeWarning: DateTimeField CurrentFlows.datetime received a naive datetime (2019-02-17 23:59:59) while time zone support is active.
+  RuntimeWarning)
+[23/Feb/2019 16:28:46] "GET /records_json/daily_spendings/recompute?period=30&sortOrder=asc HTTP/1.1" 200 1343
+[23/Feb/2019 16:28:52] "GET /static/images/loading.gif HTTP/1.1" 200 1181426
+[23/Feb/2019 16:28:56] "GET /records_json/daily_spendings?period=7&sortOrder=asc HTTP/1.1" 200 1343
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/socketserver.py", line 625, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.5/socketserver.py", line 354, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.5/socketserver.py", line 681, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.5/dist-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.5/socket.py", line 575, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[24/Feb/2019 01:41:48] "GET / HTTP/1.1" 200 18615
+[24/Feb/2019 01:41:49] "GET /static/css/bootstrap-table.css HTTP/1.1" 200 7450
+[24/Feb/2019 01:41:49] "GET /static/js/bootstrap.min.js HTTP/1.1" 200 37045
+[24/Feb/2019 01:41:49] "GET /static/js/bootstrap-table-zh-CN.js HTTP/1.1" 200 1869
+[24/Feb/2019 01:41:49] "GET /static/js/utils.js HTTP/1.1" 200 3318
+[24/Feb/2019 01:41:49] "GET /static/css/bootstrap.min.css HTTP/1.1" 200 121200
+[24/Feb/2019 01:41:50] "GET /static/js/bootstrap-table.js HTTP/1.1" 200 139854
+[24/Feb/2019 01:41:54] "GET /static/js/jquery-3.3.1.js HTTP/1.1" 200 271751
+[24/Feb/2019 01:41:56] "GET /static/js/Chart.bundle.js HTTP/1.1" 200 549514
+[24/Feb/2019 01:41:58] "GET /static/fonts/glyphicons-halflings-regular.woff2 HTTP/1.1" 200 18028
+[24/Feb/2019 01:41:58] "GET /records_json/bills?pageSize=10&pageNum=0&sortOrder=desc&_=1550972514220 HTTP/1.1" 200 24
+[24/Feb/2019 01:41:58] "GET /records_json/daily_spendings?sortOrder=asc HTTP/1.1" 200 1343
+Not Found: /favicon.ico
+[24/Feb/2019 01:41:58] "GET /favicon.ico HTTP/1.1" 404 3215
+[24/Feb/2019 10:01:00] "GET / HTTP/1.1" 200 18615
