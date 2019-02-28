@@ -183,7 +183,7 @@ def validate(request):
         if(session != None):
             sessionID = sessionID
         else:
-            server_tools.sessions.genSessionID()
+            sessionID = server_tools.sessions.genSessionID()
             user_info = server_tools.UserInfo()
             user_info.setUserInfo("user_name", form["user_name"])
             user_info.setUserInfo("auto_login", form["auto_login"])
@@ -234,7 +234,7 @@ def mobileEndValidate(request):
         if(session != None):
             sessionID = sessionID
         else:
-            server_tools.sessions.genSessionID()
+            sessionID = server_tools.sessions.genSessionID()
             user_info = server_tools.UserInfo()
             user_info.setUserInfo("user_name", form["user_name"])
             user_info.setUserInfo("auto_login", form["auto_login"])
