@@ -134,3 +134,5 @@ STATICFILES_DIRS = [
     ("fonts",os.path.join(STATIC_ROOT, 'fonts')),
     ("images",os.path.join(STATIC_ROOT, 'images')),
 ]
+
+CACHE_ROOT = os.path.join(BASE_DIR, "static", "cache")
