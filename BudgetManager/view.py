@@ -259,7 +259,38 @@ def mobileEndLogout(request):
     return HttpResponse(LOGOUT_FAILURE)
     
 def mobileEndReport(request):
-    return HttpResponse("This is your report")
+    import datetime
+    from . import functions as f
+    form = server_tools.checkRequestForm(request)
+    sessionID = None
+    session = None
+    sessionID = server_tools.sessions.parseCookies(request.COOKIES)
+    if(sessionID != None):
+        session = server_tools.sessions.getSession(sessionID)
+    else:
+        return HttpResponse("Oops! I don't know who you are.")
+    today = datetime.date.today()
+    budget_list = []
+    period = form['period']
+    user_name = session.getInfo("user_name")
+    #bills = db_tools.get_bills_by_date(session.getInfo("user_name"), today)
+    for i in range(period):
+        date = today - datetime.timedelta(days = i)
+        bills = db_tools.get_bills_by_date(user_name, date)
+        #bills in one day
+        one_day_budget = {'date':date}
+        one_day_bills = []
+        for bill in bills:
+            detail = {}
+            detail['amount'] = bill['amount']
+            detail['comment'] = bill['comment']
+            one_day_bills.append(detail)
+        one_day_budget['bills'] = one_day_bills
+        budget_list.append(one_day_budget)
+    report={"budget_list":budget_list,
+            "user_name":user_name}
+    f.report_graphs_manager.genDailySpending("dg007tg", period)
+    return render(request, "budget_mobile_end.htm", report)
 
 '''
 End of mobile end function definitions
