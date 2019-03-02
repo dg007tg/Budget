@@ -120,6 +120,44 @@ def get_bill(user_name, id = -1, date = 0, time = 0):
             return p
         else:
             return None
+        
+def get_bills_by_date(user_name, date, order = "desc"):
+    '''
+    @param user_name
+    @param date:a string in format "year-month-day" or python date object
+    '''
+    if(isinstance(date, str)):
+        import re
+        result = re.search(r'(\d{4})-(\d{1,2})-(\d{1,2})')
+        day_start = datetime.datetime(int(result.group(1), \
+                    int(result.group(2)), int(result.group(3))), \
+                    0, 0, 0)
+        day_end = datetime.datetime(day_start.year, day_start.month, day_start.day,\
+                    23, 59, 59)
+    else:
+        day_start = datetime.datetime(date.year, date.month, date.day,
+                        0, 0, 0)
+        day_end = datetime.datetime(day_start.year, day_start.month, day_start.day,\
+                        23, 59, 59)
+    if(order is 'asc'):
+        records = CurrentFlows.objects.all().filter(user_name = user_name).\
+            filter(datetime__gte = day_start).\
+            filter(datetime__lte = day_end).order_by("datetime")
+    else:
+        records = CurrentFlows.objects.all().filter(user_name = user_name).\
+            filter(datetime__gte = day_start).\
+            filter(datetime__lte = day_end).order_by("datetime")
+    ret = []
+    for var in records:
+        line = {}
+        line['date'] = var.datetime.strftime("%d/%m/%Y")
+        line['time'] = var.datetime.strftime("%H:%M:%S")
+        line['amount'] = var.amount
+        line['comment'] = var.comment
+        line['effective_to_date'] = var.effective_to_date.strftime("%d/%m/%Y")
+        line['id'] = var.id
+        ret.append(line)
+    return ret
 
 def update_bill(user_name, fields):
     '''
