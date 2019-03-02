@@ -22,6 +22,15 @@ from . import db_tools
 from . import settings
 from . import functions
 
+mobile_end_patterns = [
+    url(r"^user-report$", view.mobileEndReport),
+    url(r"^validation$", view.mobileEndValidate),
+    url(r"^logout$", view.mobileEndLogout),
+    url(r"^cache/(?P<path>.*)$", serve, {\
+            "document_root":settings.CACHE_ROOT\
+            }),
+]
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^hello$', view.hello),
@@ -42,8 +51,6 @@ urlpatterns = [
     url(r"^user-api/validation$", view.validate),
     url(r"^user-api/user-report$", view.budget),
     url(r"^user-api/logout$", view.logout),
-    url(r"^user-api/mobile-end/user-report$", view.mobileEndReport),
-    url(r"^user-api/mobile-end/validation$", view.mobileEndValidate),
-    url(r"^user-api/mobile-end/logout$", view.mobileEndLogout),
+    url(r"^user-api/mobile-end/", include(mobile_end_patterns)),
 ]
 
