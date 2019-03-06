@@ -128,6 +128,8 @@ def deleteBill(request):
 def retSpendings_json(request):
     form = server_tools.checkRequestForm(request)
     sessionID = server_tools.sessions.parseCookies(request.COOKIES)
+    import pdb
+    pdb.set_trace()
     session = server_tools.sessions.getSession(sessionID)
     numRecords, records = db_tools.get_daily_spendings(session.getInfo("user_name"), period = form["period"], sortOrder = form["sortOrder"])
     ret = {}
@@ -289,7 +291,7 @@ def mobileEndReport(request):
         budget_list.append(one_day_budget)
     report={"budget_list":budget_list,
             "user_name":user_name}
-    f.report_graphs_manager.genDailySpending("dg007tg", period)
+    f.report_graphs_manager.genDailySpending(user_name, period)
     return render(request, "budget_mobile_end.htm", report)
 
 '''

@@ -53,6 +53,9 @@ class ReportGraphsManager:
         self.cache_root = settings.CACHE_ROOT
         self.cache_dirs = ["UserReportGraphs"]
         self.startAutoClearCache()
+        self.font={"family":"Times New Roman","weight":"normal","size":23}
+        #font size correspond to period
+        self.fontSize={"7":23, "30":8, "180":4}
 
     def genDailySpending(self, user_name, period):
         '''
@@ -71,7 +74,8 @@ class ReportGraphsManager:
                         color_1 = color_1[:-1] + (0,)
                         img.putpixel(dot,color_1)
             return img
-
+        import matplotlib
+        matplotlib.use('Agg')
         import matplotlib.dates as mdates
         import matplotlib.pyplot as plt
         import PIL.Image as Image
@@ -88,6 +92,9 @@ class ReportGraphsManager:
         #plt.title("Your Shared Dailyspendings")
 
         plt.plot(x, y, ls="--", lw=3, color='tan', marker='o', ms=10, mec='#FFDEAD', mfc='#FFDEAD', mew=2)
+        plt.tick_params(labelsize = self.fontSize[str(period)])
+        plt.xlabel('Date', self.font)
+        plt.ylabel('Spending', self.font)
         plt.gcf().autofmt_xdate()
         plt.savefig(file_path)
         img = Image.open(file_path)

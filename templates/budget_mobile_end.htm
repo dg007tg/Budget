@@ -1,0 +1,123 @@
+<!-- Created: 01/03/2019 by Administrator -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional/EN">
+{%load staticfiles%}
+<html>
+  <head>
+    <title>Report</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="generator" content="PyScripter">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        th{
+            border-bottom:1px solid #d6d6d6;
+        }
+        tr:nth-child(even){
+            background:#e9e9e9
+        }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" href="{%static 'css/jquery.mobile.css'%}">
+    <script src = "{%static 'js/jquery-1.11.1.js'%}">
+    </script>
+    <script src = "{%static 'js/jquery.mobile.js'%}"></script>
+    <script src = "{%static 'js/bootstrap.min.js'%}"></script>
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <div data-role="page" id="pageone">
+        <div>
+            <div data-role="header">
+            <h1>Your Budgets</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Choose Period
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <a href="user-report?period=7">7</a>
+                        </li>
+                        <li>
+                            <a href="user-report?period=30">30</a>
+                        </li>
+                        <li>
+                            <a href="user-report?period=180">180</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="user-report?period=30">Default</a>
+                        </li>
+                    </ul>
+                </div>
+                <div data-role="collapsible-set">
+                    {%for var in budget_list%}
+                    <div data-role="collapsible">
+                        <h1>{{var.date}}</h1>
+                        <p>
+                            {%if var.bills|length == 0%}
+                            You didn't write down anything this day.
+                            {%else%}
+                                <table data-role="table" class="ui-responsive ui-shadow">
+                                    <thead>
+                                        <tr>
+                                            <th>Amount</th>
+                                            <th>Note</th>
+                                            <th>Operation</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {%for bill in var.bills%}
+                                            <tr>
+                                                <td>
+                                                    {{bill.amount}}
+                                                </td>
+                                                <td>
+                                                    {{bill.comment}}
+                                                </td>
+                                                <td>
+                                                    <a href="#home" class="ui-btn ui-btn-inline ui-shadow ui-corner-all" data-rel="dialog">hello</a>
+                                                </td>
+                                            </tr>
+                                        {%endfor%}
+                                    </tbody>
+                                </table>
+                            {%endif%}
+                        </p>
+                    </div>
+                    {%endfor%}
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div data-role="header">
+            <h1>Your Shared Dailyspending</h1>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <div align="center">
+                    <img width=100% src="cache/UserReportGraphs/{{user_name}}-dailyspending.png">
+                </div>
+            </div>
+
+            <div data-role="footer">
+            <h1>foot</h1>
+            </div>
+        </div>
+    </div>
+    <div data-role="page" id="home">
+      <div data-role="header">
+      <h1>hello</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+      <p>mainbody</p>
+      </div>
+
+      <div data-role="footer">
+      <h1>foot</h1>
+      </div>
+    </div>
+  </body>
+</html>

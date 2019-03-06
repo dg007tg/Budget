@@ -202,8 +202,8 @@ def get_daily_spendings(user_name, period, sortOrder = "desc"):
     else:
         for record in records:
             line = {}
-            line['date'] = records[idx].date.strftime("%d/%m/%Y")
-            line['spending'] = "%.2f" % float(records[idx].spending)
+            line['date'] = record.date.strftime("%d/%m/%Y")
+            line['spending'] = "%.2f" % float(record.spending)
             ret.append(line)
     return numRecords, ret
 
